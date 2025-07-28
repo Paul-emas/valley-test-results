@@ -11,7 +11,7 @@
 
 ```bash
 # Clone the repository
-git clone <https://github.com/Paul-emas/valley-test-results.git>
+git clone https://github.com/Paul-emas/valley-test-results.git
 cd valley
 
 # Install dependencies (using Bun for optimal performance)
