@@ -21,7 +21,12 @@ import CustomDropdown from "@/components/custom/custom-dropdown";
 import ProspectProfileTemplate from "./prospect-profile/prospect-profile-template";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const ProspectTemplate: React.FC = () => {
+interface ProspectTemplateProps {
+  onCloseSideMenu: () => void;
+}
+const ProspectTemplate: React.FC<ProspectTemplateProps> = ({
+  onCloseSideMenu,
+}) => {
   const tabs = [
     { label: "AI Training", value: "ai-training", icon: BrainIcon },
     { label: "Messages", value: "messages", icon: TrayIcon },
@@ -39,7 +44,7 @@ const ProspectTemplate: React.FC = () => {
   return (
     <div className="p-3">
       <div className="flex items-center gap-x-1">
-        <Button size="icon" variant="ghost">
+        <Button onClick={onCloseSideMenu} size="icon" variant="ghost">
           <XIcon />
         </Button>
         <Button size="icon" variant="outline">

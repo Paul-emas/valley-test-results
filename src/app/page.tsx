@@ -22,7 +22,9 @@ export default function Home() {
         onClosePanel={onCloseSideMenu}
         showCloseButton={false}
         contentBackgroundColor="#F8F8F8"
-        sidePanelContent={<ProspectTemplate />}
+        sidePanelContent={
+          <ProspectTemplate onCloseSideMenu={onCloseSideMenu} />
+        }
       />
     </>
   );
